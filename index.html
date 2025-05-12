@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Interactive Playground</h1>
+        <p>Press the <kbd>Spacebar</kbd> for a surprise!</p>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section class="card" id="event-handling">
+            <h2>Event Handling 🎈</h2>
+            <div class="content">
+                <button id="color-button">Change My Color</button>
+                <div id="hover-element">Hover over me!</div>
+                <div id="keypress-display">Press any key...</div>
+                <div id="secret-element">Double-click me for a secret!</div>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section class="card" id="interactive-elements">
+            <h2>Interactive Elements 🎮</h2>
+            
+            <!-- Image Gallery -->
+            <div class="gallery-container">
+                <h3>Image Gallery</h3>
+                <div class="gallery">
+                    <img src="/api/placeholder/600/400" alt="Gallery Image 1" class="gallery-image active">
+                    <img src="/api/placeholder/600/400" alt="Gallery Image 2" class="gallery-image">
+                    <img src="/api/placeholder/600/400" alt="Gallery Image 3" class="gallery-image">
+                </div>
+                <div class="gallery-controls">
+                    <button id="prev-btn">Previous</button>
+                    <div class="gallery-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <h3>Content Tabs</h3>
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="tab1">Tab 1</button>
+                    <button class="tab-button" data-tab="tab2">Tab 2</button>
+                    <button class="tab-button" data-tab="tab3">Tab 3</button>
+                </div>
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane active">
+                        <h4>Tab Content 1</h4>
+                        <p>This is the content for the first tab. You can put anything here!</p>
+                    </div>
+                    <div id="tab2" class="tab-pane">
+                        <h4>Tab Content 2</h4>
+                        <p>This is the content for the second tab. It appears when you click on Tab 2.</p>
+                    </div>
+                    <div id="tab3" class="tab-pane">
+                        <h4>Tab Content 3</h4>
+                        <p>This is the content for the third tab. It appears when you click on Tab 3.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section class="card" id="form-validation">
+            <h2>Form Validation 📋✅</h2>
+            <form id="validation-form">
+                <div class="form-group">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email (required):</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password (min 8 characters):</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="password-error"></span>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text">Password strength</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <span class="error-message" id="confirm-password-error"></span>
+                </div>
+                
+                <button type="submit" id="submit-button">Submit</button>
+                <div id="form-result"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for JavaScript Event Handling & Interactive Elements Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
